@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>map-gradient.png</file>
+        <file>arrow.png</file>
+        <file>gauge-outline.png</file>
+        <file>map-gradient-enclosed.png</file>
+        <file>left-arrow.png</file>
+        <file>Components/Gauge.qml</file>
+    </qresource>
+</RCC>
