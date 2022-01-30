@@ -26,6 +26,7 @@ Window {
             gaugeOne.state === '' ? gaugeOne.state = 'other' : gaugeOne.state = ''
             gaugeTwo.state === '' ? gaugeTwo.state = 'other' : gaugeTwo.state = ''
             gradientImg.state === '' ? gradientImg.state = 'other' : gradientImg.state = ''
+            gradientEnclosedImg.state === '' ? gradientEnclosedImg.state = 'other' : gradientEnclosedImg.state = ''
         }
     }
 
@@ -80,7 +81,7 @@ Window {
             height: 600
             plugin: mapboxglPlugin
             center: QtPositioning.coordinate(40.71971, -73.99428)
-            zoomLevel: 18.4
+            zoomLevel: 17.5
             tilt: 90
             minimumZoomLevel: 5
             maximumZoomLevel: 50
@@ -104,21 +105,59 @@ Window {
         }
 
         Image {
-            id: gradientImg
+            id: gradientEnclosedImg
             x: 0
             y: 0
             z: 1
             source: "map-gradient-enclosed.png"
+            opacity: 1
 
             states: [
-                // This adds a second state to the container where the rectangle is farther to the right
+                State {
+                    name: "other"
 
+                    PropertyChanges {
+                        target: gradientEnclosedImg
+                        opacity: 0
+                    }
+                }
+            ]
+
+            transitions: [
+                Transition {
+                    NumberAnimation
+                    {
+                        properties: "opacity"
+                        duration: 800
+                    }
+                }
+            ]
+        }
+
+        Image {
+            id: gradientImg
+            x: 0
+            y: 0
+            z: 1
+            source: "map-gradient.png"
+
+            states: [
                 State {
                     name: "other"
 
                     PropertyChanges {
                         target: gradientImg
-                        source: "map-gradient.png"
+                        opacity: 1
+                    }
+                }
+            ]
+
+            transitions: [
+                Transition {
+                    NumberAnimation
+                    {
+                        properties: "opacity"
+                        duration: 800
                     }
                 }
             ]
@@ -157,7 +196,7 @@ Window {
        }
        PluginParameter {
            name: "mapboxgl.mapping.additional_style_urls"
-           value: "mapbox://styles/mapbox/dark-v10"
+           value: "mapbox://styles/filipv/ckyw4lmi0005b14pkmh140mi5"
        }
     }
 
