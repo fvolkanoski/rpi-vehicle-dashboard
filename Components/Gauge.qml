@@ -52,18 +52,11 @@ Item {
             }
         }
     }
-    MouseArea {
-        anchors.fill: parent
-
-        onClicked: {
-            root.state === '' ? root.state = 'other' : root.state = ''
-        }
-    }
     states: [
         // This adds a second state to the container where the rectangle is farther to the right
 
         State {
-            name: "other"
+            name: "open"
 
             PropertyChanges {
                 target: root

@@ -7,5 +7,8 @@
         <file>map-gradient-enclosed.png</file>
         <file>left-arrow.png</file>
         <file>Components/Gauge.qml</file>
+        <file>Components/NavInfo.qml</file>
+        <file>Components/NavMap.qml</file>
+        <file>Components/MapGradient.qml</file>
     </qresource>
 </RCC>
