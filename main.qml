@@ -19,12 +19,38 @@ Window {
         width: 50
         height: 50
         z: 3
-        text: "Gauges"
+        text: "ST"
 
         onClicked: {
             gaugeKMH.state === 'enclosed' ? gaugeKMH.state = 'open' : gaugeKMH.state = 'enclosed'
             gaugeRPM.state === 'enclosed' ? gaugeRPM.state = 'open' : gaugeRPM.state = 'enclosed'
             mapGradient.state === 'enclosed' ? mapGradient.state = 'open' : mapGradient.state = 'enclosed'
+        }
+    }
+
+    Button {
+        x: 50
+        y: 0
+        width: 50
+        height: 50
+        z: 3
+        text: "-"
+
+        onClicked: {
+            navMap.mapZoom -= 0.5;
+        }
+    }
+
+    Button {
+        x: 100
+        y: 0
+        width: 50
+        height: 50
+        z: 3
+        text: "+"
+
+        onClicked: {
+            navMap.mapZoom += 0.5;
         }
     }
 
@@ -46,6 +72,7 @@ Window {
             y: 0
             width: 1024
             height: 600
+            mapStyle: "mapbox://styles/filipv/ckyw4lmi0005b14pkmh140mi5"
         }
 
         MapGradient {

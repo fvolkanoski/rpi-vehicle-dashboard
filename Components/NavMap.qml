@@ -3,6 +3,9 @@ import QtPositioning 5.15
 import QtLocation 5.15
 
 Item {
+    property string mapStyle: "mapbox://styles/filipv/ckyw4lmi0005b14pkmh140mi5"
+    property real mapZoom: 17.5
+
     Map {
         id: mapa
         x: 0
@@ -11,7 +14,7 @@ Item {
         height: 600
         plugin: mapboxglPlugin
         center: QtPositioning.coordinate(40.71971, -73.99428)
-        zoomLevel: 17.5
+        zoomLevel: mapZoom
         tilt: 90
         minimumZoomLevel: 5
         maximumZoomLevel: 50
@@ -44,7 +47,7 @@ Item {
        }
        PluginParameter {
            name: "mapboxgl.mapping.additional_style_urls"
-           value: "mapbox://styles/filipv/ckyw4lmi0005b14pkmh140mi5"
+           value: mapStyle
        }
     }
 }

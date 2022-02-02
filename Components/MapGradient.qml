@@ -10,6 +10,7 @@ Item {
     Image {
         id: gradientOpenImg
         source: "qrc:/map-gradient.png"
+        opacity: 0
     }
 
     states: [
