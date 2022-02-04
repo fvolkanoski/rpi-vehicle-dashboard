@@ -62,7 +62,7 @@ Window {
             x: 462
             y: 0
             z: 2
-            width: 100
+            width: 120
             height: 150
         }
 
