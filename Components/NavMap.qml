@@ -29,7 +29,7 @@ Item {
             anchorPoint.y: navigationArrowImage.height / 2
             sourceItem: Image {
                 id: navigationArrowImage
-                source: "qrc:/arrow.png"
+                source: "qrc:/Images/arrow.png"
                 width: 32
                 height: 32
                 mipmap: true

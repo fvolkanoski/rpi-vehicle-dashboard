@@ -3,13 +3,13 @@ import QtQuick 2.0
 Item {
     Image {
         id: gradientEnclosedImg
-        source: "qrc:/map-gradient-enclosed.png"
+        source: "qrc:/Images/map-gradient-enclosed.png"
         opacity: 1
     }
 
     Image {
         id: gradientOpenImg
-        source: "qrc:/map-gradient.png"
+        source: "qrc:/Images/map-gradient.png"
         opacity: 0
     }
 

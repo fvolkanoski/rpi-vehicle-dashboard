@@ -58,6 +58,14 @@ Window {
         anchors.fill: parent
         color: "#2d3436"
 
+        TopBar {
+            x: 125
+            y: 0
+            width: 200
+            height: 50
+            z: 2
+        }
+
         NavInfo {
             x: 462
             y: 0

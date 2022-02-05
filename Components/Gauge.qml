@@ -11,7 +11,7 @@ Item {
     property string valueInfo
 
     Image {
-        source: "qrc:/gauge-outline.png"
+        source: "qrc:/Images/gauge-outline.png"
         id: container
         anchors.fill: parent
 
