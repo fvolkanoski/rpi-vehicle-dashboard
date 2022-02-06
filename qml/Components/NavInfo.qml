@@ -15,7 +15,7 @@ Item {
             y: 15
             width: 70
             height: 70
-            source: "qrc:/Images/left-arrow.png"
+            source: "qrc:/images/left-arrow.png"
             mipmap: true
         }
 

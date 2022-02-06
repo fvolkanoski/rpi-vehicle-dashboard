@@ -1,19 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>Components/Gauge.qml</file>
-        <file>Components/NavInfo.qml</file>
-        <file>Components/NavMap.qml</file>
-        <file>Components/MapGradient.qml</file>
-        <file>Images/arrow.png</file>
-        <file>Images/gauge-outline.png</file>
-        <file>Images/left-arrow.png</file>
-        <file>Images/map-gradient.png</file>
-        <file>Images/map-gradient-enclosed.png</file>
-        <file>Images/top-bar.png</file>
-        <file>Components/TopBar.qml</file>
-        <file>Images/DashboardSymbols/turn-left.png</file>
-        <file>Images/DashboardSymbols/turn-right.png</file>
-        <file>Components/DashSymbol.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/Components/Gauge.qml</file>
+        <file>qml/Components/NavMap.qml</file>
     </qresource>
 </RCC>

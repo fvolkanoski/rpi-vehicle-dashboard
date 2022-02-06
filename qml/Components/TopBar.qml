@@ -4,20 +4,20 @@ Item {
     id: root
 
     Image {
-        source: "qrc:/Images/top-bar.png"
+        source: "qrc:/images/top-bar.png"
     }
 
     DashSymbol {
         x: 40
         y: 5
-        imgSrc: "qrc:/Images/DashboardSymbols/turn-left.png"
+        imgSrc: "qrc:/images/DashboardSymbols/turn-left.png"
         isBlinking: true
     }
 
     DashSymbol {
         x: 690
         y: 5
-        imgSrc: "qrc:/Images/DashboardSymbols/turn-right.png"
+        imgSrc: "qrc:/images/DashboardSymbols/turn-right.png"
         isBlinking: true
     }
 }

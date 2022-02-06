@@ -12,27 +12,25 @@ Window {
     height: 600
     visible: true
 
-    // Test button to switch between states
     Button {
         x: 0
         y: 0
-        width: 50
-        height: 50
+        width: 25
+        height: 25
         z: 3
         text: "ST"
 
         onClicked: {
             gaugeKMH.state === 'enclosed' ? gaugeKMH.state = 'open' : gaugeKMH.state = 'enclosed'
             gaugeRPM.state === 'enclosed' ? gaugeRPM.state = 'open' : gaugeRPM.state = 'enclosed'
-            mapGradient.state === 'enclosed' ? mapGradient.state = 'open' : mapGradient.state = 'enclosed'
         }
     }
 
     Button {
-        x: 50
+        x: 25
         y: 0
-        width: 50
-        height: 50
+        width: 25
+        height: 25
         z: 3
         text: "-"
 
@@ -42,10 +40,10 @@ Window {
     }
 
     Button {
-        x: 100
+        x: 50
         y: 0
-        width: 50
-        height: 50
+        width: 25
+        height: 25
         z: 3
         text: "+"
 
@@ -58,37 +56,13 @@ Window {
         anchors.fill: parent
         color: "#2d3436"
 
-        TopBar {
-            x: 125
-            y: 0
-            width: 200
-            height: 50
-            z: 2
-        }
-
-        NavInfo {
-            x: 462
-            y: 0
-            z: 2
-            width: 120
-            height: 150
-        }
-
         NavMap {
             id: navMap
             x: 0
             y: 0
             width: 1024
             height: 600
-            mapStyle: "mapbox://styles/filipv/ckyw4lmi0005b14pkmh140mi5"
-        }
-
-        MapGradient {
-            id: mapGradient
-            x: 0
-            y: 0
-            z: 1
-            state: "enclosed"
+            mapStyle: "mapbox://styles/filipv/ckzadjsxh000l15rsouno6l39"
         }
 
         Gauge {

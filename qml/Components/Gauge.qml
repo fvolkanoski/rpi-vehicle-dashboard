@@ -11,14 +11,18 @@ Item {
     property string valueInfo
 
     Image {
-        source: "qrc:/Images/gauge-outline.png"
+        source: "qrc:/images/gauge-outline.png"
         id: container
         anchors.fill: parent
 
         Text {
             id: speedTxt
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
+
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+            }
+
             text: value
             color: "white"
             font.pixelSize: 72
