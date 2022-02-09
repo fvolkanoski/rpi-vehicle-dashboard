@@ -1,7 +1,7 @@
-#ifndef SERIALMODULE_H
-#define SERIALMODULE_H
+#pragma once
 
 #include <QObject>
+#include <QtSerialPort/QSerialPort>
 
 class SerialModule : public QObject
 {
@@ -9,8 +9,17 @@ class SerialModule : public QObject
 
 public:
     explicit SerialModule(QObject *parent = nullptr);
-
     ~SerialModule();
-};
 
-#endif
+    bool openPort();
+
+signals:
+    void dataReceived(QString msg);
+
+private slots:
+    void receive();
+    void serialError(QSerialPort::SerialPortError err);
+
+private:
+    QSerialPort *_serialPort;
+};
