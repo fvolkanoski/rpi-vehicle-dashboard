@@ -6,7 +6,8 @@ QT += quick virtualkeyboard location
 
 SOURCES += \
         dashboardcontroller.cpp \
-        main.cpp
+        main.cpp \
+        messageparser.cpp
 
 RESOURCES += qml.qrc \
     res.qrc
@@ -27,4 +28,5 @@ include(../share/dbus/dbus.pri)
 include(../share/share.pri)
 
 HEADERS += \
-    dashboardcontroller.h
+    dashboardcontroller.h \
+    messageparser.h
