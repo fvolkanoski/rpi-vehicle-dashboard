@@ -6,7 +6,7 @@ MessageParser::MessageParser(QObject *parent)
 
 }
 
-char MessageParser::parseMessageType(QString &msg)
+char MessageParser::parseMessageType(const QString &msg)
 {
     Q_UNUSED(msg);
 

@@ -18,7 +18,7 @@ public:
     void initializeQmlContext(QQmlEngine *engine);
 
 private slots:
-    void messageReceived(QString &msg);
+    void messageReceived(const QString &deviceId, const QString &msg);
 
 private:
     QQmlEngine *_engine;

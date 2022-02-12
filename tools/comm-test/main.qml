@@ -37,12 +37,22 @@ Window {
         x: 5
         y: 50
         text: "Send to Dbus"
+
+        onClicked: {
+            if(commController.sendMsgToDbus(msgInput.text))
+                console.log("Message sent to dbus successfully.");
+        }
     }
 
     Button {
         x: 405
         y: 50
         text: "Send to Serial"
+
+        onClicked: {
+            if(commController.sendMsgToSerial(msgInput.text))
+                console.log("Message sent to dbus successfully.");
+        }
     }
 
     InputPanel {

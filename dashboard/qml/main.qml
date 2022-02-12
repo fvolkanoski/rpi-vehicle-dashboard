@@ -12,46 +12,6 @@ Window {
     height: 600
     visible: true
 
-    Button {
-        x: 0
-        y: 0
-        width: 25
-        height: 25
-        z: 3
-        text: "ST"
-
-        onClicked: {
-            gaugeKMH.state === 'enclosed' ? gaugeKMH.state = 'open' : gaugeKMH.state = 'enclosed'
-            gaugeRPM.state === 'enclosed' ? gaugeRPM.state = 'open' : gaugeRPM.state = 'enclosed'
-        }
-    }
-
-    Button {
-        x: 25
-        y: 0
-        width: 25
-        height: 25
-        z: 3
-        text: "-"
-
-        onClicked: {
-            navMap.mapZoom -= 0.5;
-        }
-    }
-
-    Button {
-        x: 50
-        y: 0
-        width: 25
-        height: 25
-        z: 3
-        text: "+"
-
-        onClicked: {
-            navMap.mapZoom += 0.5;
-        }
-    }
-
     Rectangle {
         anchors.fill: parent
         color: "#2d3436"
