@@ -12,6 +12,7 @@ DbusModule::DbusModule(const QString &deviceId, QObject *parent)
     : QObject(parent),
       m_helper(new DbusHelper(this))
 {
+    // TODO: Replace all printouts with prints to log.
     std::cout << "Init DBus instance for process: " << deviceId.toStdString() << std::endl;
 
     m_dbusService = m_serviceName + "." + deviceId;
@@ -35,6 +36,8 @@ DbusModule::~DbusModule()
 
 bool DbusModule::connect()
 {
+    // TODO: Replace all printouts with prints to log.
+
     if (!m_bus.isConnected())
     {
         std::cerr << "Cannot connect to the D-Bus session bus" << std::endl;
@@ -76,6 +79,8 @@ bool DbusModule::disconnect()
 
 bool DbusModule::sendFrame(const QString &destAddress, const QString &frame)
 {
+    // TODO: Replace all printouts with prints to log.
+
     auto dbusService = m_serviceName + "." + destAddress;
     auto path = QString("/") + destAddress;
 
@@ -104,6 +109,8 @@ bool DbusModule::sendFrame(const QString &destAddress, const QString &frame)
 
 void DbusModule::frameReceivedSlot(const QString &deviceId, const QString &frame)
 {
+    // TODO: Replace all printouts with prints to log.
+
     emit this->frameReceived(deviceId, frame);
 
     std::cout << m_moduleName.toStdString() << " Received frame from: " << deviceId.toStdString()
