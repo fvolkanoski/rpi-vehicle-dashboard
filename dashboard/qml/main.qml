@@ -23,6 +23,7 @@ Window {
             width: 1024
             height: 600
             mapStyle: "mapbox://styles/filipv/ckzadjsxh000l15rsouno6l39"
+            mapZoom: mapController.zoomLevel
         }
 
         Gauge {
