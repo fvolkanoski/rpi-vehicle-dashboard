@@ -4,4 +4,5 @@ SUBDIRS += \
     dashboard \
     tl-detector \
     tools/comm-test \
-    serial
+    serial \
+    canbus
