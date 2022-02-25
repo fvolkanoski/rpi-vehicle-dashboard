@@ -43,9 +43,22 @@ void DashboardController::messageReceived(const QString &deviceId, const QString
                     _mapController->setZoomLevel(_mapController->zoomLevel() + 0.5);
                     break;
                 }
+
                 case 2: // Zoom Out
                 {
                     _mapController->setZoomLevel(_mapController->zoomLevel() - 0.5);
+                    break;
+                }
+
+                case 3: // Map state enclosed
+                {
+                    _mapController->setMapState(MAP_STATE_ENCLOSED);
+                    break;
+                }
+
+                case 4: // Map state open
+                {
+                    _mapController->setMapState(MAP_STATE_OPEN);
                     break;
                 }
 

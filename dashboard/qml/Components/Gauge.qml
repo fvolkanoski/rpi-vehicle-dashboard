@@ -57,15 +57,13 @@ Item {
         }
     }
     states: [
-        // This adds a second state to the container where the rectangle is farther to the right
-
         State {
             name: "open"
 
             PropertyChanges {
                 target: root
-                x: zoomOutX;
-                y: zoomOutY;
+                x: zoomOutX
+                y: zoomOutY
                 width: 128
                 height: 128
             }
@@ -82,9 +80,7 @@ Item {
         }
     ]
     transitions: [
-        // This adds a transition that defaults to applying to all state changes
         Transition {
-            // This applies a default NumberAnimation to any changes a state change makes to x or y properties
             NumberAnimation
             {
                 properties: "x,y,width,height"

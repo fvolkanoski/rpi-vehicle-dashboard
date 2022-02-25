@@ -35,7 +35,7 @@ Window {
             valueInfo: "KM/H"
             zoomOutX: 10
             zoomOutY: 462
-            state: "enclosed"
+            state: mapController.mapState
         }
 
         Gauge {
@@ -47,7 +47,7 @@ Window {
             valueInfo: "RPM"
             zoomOutX: 886
             zoomOutY: 462
-            state: "enclosed"
+            state: mapController.mapState
         }
     }
 

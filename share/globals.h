@@ -23,3 +23,7 @@
 #define DBUS_SERIAL "Serial"
 #define DBUS_DASHBOARD "Dashboard"
 #define DBUS_TLDETECTOR "TLDetector"
+
+// Map
+#define MAP_STATE_ENCLOSED "enclosed"
+#define MAP_STATE_OPEN "open"
