@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+#include "../share/globals.h"
+
 class MapController : public QObject
 {
     Q_OBJECT
@@ -23,8 +25,8 @@ signals:
     void mapStateChanged();
 
 private:
-    float m_zoomLevel;
-    QString m_mapState;
+    float m_zoomLevel = 17.5;
+    QString m_mapState = MAP_STATE_ENCLOSED;
 };
 
 #endif // MAPCONTROLLER_H

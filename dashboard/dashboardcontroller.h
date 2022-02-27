@@ -5,6 +5,7 @@
 
 #include "messageparser.h"
 #include "mapcontroller.h"
+#include "datacontroller.h"
 #include "../share/globals.h"
 #include "../share/dbus/dbusmodule.h"
 #include "../share/dbus/dbushelper.h"
@@ -26,4 +27,5 @@ private:
     DbusModule *_dbusModule;
     MessageParser *_msgParser;
     MapController *_mapController;
+    DataController *_dataController;
 };

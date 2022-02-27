@@ -31,7 +31,7 @@ Window {
             x: 20
             y: 172
             z: 1
-            value: 32
+            value: dataController.speedKmph
             valueInfo: "KM/H"
             zoomOutX: 10
             zoomOutY: 462
@@ -43,7 +43,7 @@ Window {
             x: 748
             y: 172
             z: 1
-            value: 800
+            value: dataController.RPM
             valueInfo: "RPM"
             zoomOutX: 886
             zoomOutY: 462

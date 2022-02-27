@@ -6,6 +6,7 @@ QT += quick virtualkeyboard location
 
 SOURCES += \
         dashboardcontroller.cpp \
+        datacontroller.cpp \
         main.cpp \
         mapcontroller.cpp \
         messageparser.cpp
@@ -30,5 +31,6 @@ include(../share/share.pri)
 
 HEADERS += \
     dashboardcontroller.h \
+    datacontroller.h \
     mapcontroller.h \
     messageparser.h

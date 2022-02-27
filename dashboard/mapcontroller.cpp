@@ -1,11 +1,8 @@
 #include "mapcontroller.h"
-#include "../share/globals.h"
 
 MapController::MapController(QObject *parent)
     : QObject{parent}
 {
-    m_zoomLevel = 17.5;
-    m_mapState = MAP_STATE_ENCLOSED;
 }
 
 float MapController::zoomLevel() const
