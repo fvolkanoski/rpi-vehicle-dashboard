@@ -18,6 +18,11 @@ CanBusModule::CanBusModule(QObject *parent)
     }
 }
 
+CanBusModule::~CanBusModule()
+{
+    delete _device;
+}
+
 void CanBusModule::canBusFrameReceived()
 {
     emit frameReceived(_device->readFrame());
