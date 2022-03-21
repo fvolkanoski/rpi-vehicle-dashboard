@@ -1,6 +1,5 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
-import QtQuick.VirtualKeyboard 2.15
 import QtGraphicalEffects 1.15
 import QtQuick.Controls 2.5
 
@@ -48,35 +47,6 @@ Window {
             zoomOutX: 886
             zoomOutY: 462
             state: mapController.mapState
-        }
-    }
-
-    InputPanel {
-        id: inputPanel
-        z: 99
-        x: 0
-        y: window.height
-        width: window.width
-
-        states: State {
-            name: "visible"
-            when: inputPanel.active
-            PropertyChanges {
-                target: inputPanel
-                y: window.height - inputPanel.height
-            }
-        }
-        transitions: Transition {
-            from: ""
-            to: "visible"
-            reversible: true
-            ParallelAnimation {
-                NumberAnimation {
-                    properties: "y"
-                    duration: 250
-                    easing.type: Easing.InOutQuad
-                }
-            }
         }
     }
 }
