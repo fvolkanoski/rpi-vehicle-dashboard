@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Window 2.15
-import QtQuick.VirtualKeyboard 2.15
+import QtQuick.Layouts 1.15
 
 Window {
     id: window
@@ -10,11 +10,43 @@ Window {
     visible: true
     title: qsTr("Dbus & Serial Test")
 
-    Rectangle {
+    RowLayout {
         x: 5
         y: 5
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        RadioButton {
+            checked: true
+            text: qsTr("Dbus")
+
+            onCheckedChanged: {
+                if(checked)
+                    commController.commType = 1;
+            }
+        }
+        RadioButton {
+            text: qsTr("Serial")
+
+            onCheckedChanged: {
+                if(checked)
+                    commController.commType = 2;
+            }
+        }
+        RadioButton {
+            text: qsTr("CANBus")
+
+            onCheckedChanged: {
+                if(checked)
+                    commController.commType = 3;
+            }
+        }
+    }
+
+    Rectangle {
+        x: 5
+        y: 55
         height: 30
-        width: 500
+        width: parent.width - 10
 
         border {
             width: 1
@@ -34,24 +66,53 @@ Window {
     }
 
     Button {
-        x: 5
-        y: 50
-        text: "Send to Dbus"
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 100
+        text: "Send"
 
         onClicked: {
-            if(commController.sendMsgToDbus(msgInput.text))
+            if(commController.sendMsg(msgInput.text))
                 console.log("Message sent to dbus successfully.");
         }
     }
 
-    Button {
-        x: 405
-        y: 50
-        text: "Send to Serial"
+    RowLayout {
+        x: 20
+        y: 200
+        width: parent.width - 10
+        ColumnLayout {
+            Button {
+                text: "Map Zoom In"
 
-        onClicked: {
-            if(commController.sendMsgToSerial(msgInput.text))
-                console.log("Message sent to dbus successfully.");
+                onClicked: {
+                    if(commController.sendFixedMsg(1))
+                        console.log("Message sent successfully.");
+                }
+            }
+            Button {
+                text: "Map Zoom Out"
+
+                onClicked: {
+                    if(commController.sendFixedMsg(2))
+                        console.log("Message sent successfully.");
+                }
+            }
+            Button {
+                text: "Gauge Layout Open"
+
+                onClicked: {
+                    if(commController.sendFixedMsg(3))
+                        console.log("Message sent successfully.");
+                }
+            }
+            Button {
+                text: "Gauge Layout Enclosed"
+
+                onClicked: {
+                    if(commController.sendFixedMsg(4))
+                        console.log("Message sent successfully.");
+                }
+            }
         }
     }
 }
