@@ -3,6 +3,8 @@
 #include <QObject>
 
 #include "canbusmodule.h"
+#include "../../share/dbus/dbusmodule.h"
+#include "../../share/dbus/dbushelper.h"
 
 /*! \brief CanBusManager class.
  *  The CanBusManager class is responsible for managing the CanBus module and
@@ -26,6 +28,13 @@ public:
     ~CanBusManager();
 
 private slots:
+    /*! \brief This slot is triggered when a message is received through dbus.
+     *  @param[in] deviceId The device id which sent the message.
+     *  @param[in] msg The message.
+     *  @return none
+    */
+    void messageReceived(const QString &deviceId, const QString &msg);
+
     /*! \brief This slot is triggered by the frameReceived signal from the
      *         CanBusModule class.
      *  @param[in] frame The CanBus frame which was received.
@@ -34,6 +43,10 @@ private slots:
     void canFrameReceived(QCanBusFrame frame);
 
 private:
+    /*! \brief The dbus module pointer.
+      */
+    DbusModule *_dbusModule;
+
     /*! \brief The CanBus module pointer.
       */
     CanBusModule *_canBusModule;

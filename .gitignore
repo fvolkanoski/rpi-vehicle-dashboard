@@ -54,3 +54,5 @@ compile_commands.json
 *.user
 
 3rdparty/opencv/
+
+tl-detector/img/

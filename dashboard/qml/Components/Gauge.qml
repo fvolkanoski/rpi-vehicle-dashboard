@@ -40,8 +40,12 @@ Item {
 
         Text {
             id: speedInfo
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.top: speedTxt.bottom
+
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                top: speedTxt.bottom
+            }
+
             text: valueInfo
             color: "white"
             font.pixelSize: 20
