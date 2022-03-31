@@ -1,4 +1,4 @@
-# RPI Vehicle Dashboard
+(In Progress) # RPI Vehicle Dashboard
 A vehicle dashboard running on Raspberry Pi 4, it is designed for a 1024x600 10" display.
 
 # Getting Started
